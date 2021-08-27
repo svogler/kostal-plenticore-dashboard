@@ -1,1 +1,26 @@
-
+version: '3'
+services:    
+  influxdb:
+    image: 'influxdb:1.8'
+    ports:
+      - '8086:8086'
+    volumes:
+      - 'vol_influxdb:/var/lib/influxdb'
+    environment:
+      - INFLUXDB_DB=telegraf
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+  
+  telegraf:
+    image: 'telegraf:latest'
+    volumes:
+      - '/home/pi/docker/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf'
+    environment:
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+    depends_on:
+      - influxdb
+    
+volumes:
+  vol_influxdb: 
+  vol_telegraf: 
