@@ -5,3 +5,9 @@ Grafana Dashboard to visualize PV Kostal Plenticore information retrieved via Mo
 Data are retrieved via Telegraf / Modbus and stored in InfluxDB. Grafana is used for visualization. 
 Docker is used as container.
 
+
+## Example
+
+![Dashboard Example](/doc/dashboard_example.jpg)
+
+
