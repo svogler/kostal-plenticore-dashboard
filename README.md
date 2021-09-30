@@ -4,10 +4,11 @@ Grafana Dashboard to visualize PV Kostal Plenticore information retrieved via Mo
 All is run on a Raspberry 3b+
 
 Data are retrieved via Telegraf / Modbus and stored in InfluxDB. Grafana is used for visualization.
-Docker is used as container for Telegraf. Grafana is not part of the Docker config (in my case installed locally)
+Docker is used as container for Telegraf. 
+JSON for the Grafana dashboard is part of the repo, Grafana itself is not part of the Docker container (in my case Grafana is installed locally)
 
 
-## Example
+## Screenshot
 
 ![Dashboard Example](/doc/dashboard_example.jpg)
 
