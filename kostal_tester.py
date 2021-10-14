@@ -275,7 +275,7 @@ class kostal_modbusquery:
         self.Adr216.append(0) 
 
         self.Adr218=[]
-        self.Adr218 =[100]
+        self.Adr218 =[218]
         self.Adr218.append("Cos phi (powermeter)")
         self.Adr218.append("Float")
         self.Adr218.append(0) 
@@ -726,7 +726,7 @@ if __name__ == "__main__":
     except Exception as ex:
         print ("Issues querying Kostal Plenticore -ERROR :", ex)
     for elements in Kostalquery.KostalRegister:
-        print ( elements[1], elements[3])
+        print ( elements[0], " - ", elements[1], " = ", elements[3])
     print ("Done...")
     ##########################################
     print ("----------------------------------")
